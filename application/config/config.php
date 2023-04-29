@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$config['base_url'] = 'http://localhost:81/JNEC/';
+$config['base_url'] = 'http://localhost/JNEC/';
 //noreplyhram2021@gmail.com;
 //hhcbt@2021;
 $config['index_page'] = 'index.php';
