@@ -55,7 +55,7 @@
                     <div class="form-group">
                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <label>Event Image:</label><span style="color: red;"><i>(Image Size:140x27)</i></span>
-                        <img src="<?php echo base_url();?><?=$eventdetails->Image;?>" alt="no imaged" onerror="this.src='<?php echo base_url();?>uploads/user1-128x128.png'" width="30%" align="left">
+                        <img src="<?php echo base_url();?><?=$eventdetails->Image;?>" alt="no imaged" onerror="this.src='<?php echo base_url();?><?=$eventdetails->Image;?>'" width="30%" align="left">
                         <input type="file" id="Image" name="Image">
                         Choose image to change
                         <input type="hidden" name="currentlogoinivalue" value="<?=$eventdetails->Image;?>">

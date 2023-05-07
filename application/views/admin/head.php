@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dashboard| JNEC</title>
+  <title>Dashboard</title>
   <link rel="icon" href="<?php echo base_url();?>upload/jnec.png" type="image/x-icon" />
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>uploads/new.png" />
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">

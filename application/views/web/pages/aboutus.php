@@ -3,6 +3,7 @@
     $this->load->view('web/includes/head.php');
 ?>
 <body>
+<div class="body-wrapper">
   <div id="mainpublicContent">
     <?php
     $this->load->view('web/includes/navbar.php');
@@ -48,6 +49,7 @@
     $this->load->view('web/includes/footer.php');
 ?>
   </div>
+</div>
 </body>
 
 
