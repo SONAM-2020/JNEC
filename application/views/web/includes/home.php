@@ -126,9 +126,12 @@
         <?php foreach($t_news as $i => $event): ?>
             <div class="col-lg-3">
               <div class="single-product-wrap">
-                <div class="product-image">
+                <div class="product-image" style=" width: 100%;
+  height: 250px; 
+  overflow: hidden;">
                   <a href="single-product.html">
-                    <img src="<?php echo $event['Image']; ?>" alt="Li's Product Image">
+                    <img src="<?php echo $event['Image']; ?>" alt="Li's Product Image" style=" width: 100%;
+  height: 200px;">
                   </a>
                 </div>
                 <div class="product_desc">
