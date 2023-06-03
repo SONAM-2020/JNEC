@@ -9,7 +9,9 @@
               <div class="col-lg-12 col-md-12">
                   <div class="slider-area">
                       <div class="slider-active owl-carousel">
-                          <?php foreach($t_slider as $i=> $event): ?>
+                          <?php 
+                          $t_slider = array_reverse($t_slider);
+                          foreach($t_slider as $i=> $event): ?>
                           <div class="single-slide align-center-left  animation-style-01 bg-1" style="background-image: url('<?php echo base_url();?><?php echo$event['Image'];?>" >
                               <div class="slider-progress"></div>
                           </div>
@@ -23,8 +25,8 @@
   <br><br><br><br>
   
   
-  <div class="container">
-  <div className="project-info" style=" background-color: #f7f7f7;
+  <div>
+  <div  style=" background-color: #f7f7f7;
   padding: 20px;
   margin-bottom: 20px;
   max-width: 1500px;
@@ -41,10 +43,11 @@
       <p className="project-details mt-5" style="  font-size: 18px;
   color: #666;
   line-height: 1.5;
+  margin-top: 30px;                                 
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;">
+  text-align: justify;">
         Jigme Namgyel Engineering College in collaboration with Innsbruck
         University, Austria has been awarded APPEAR (Austrian Partnership
         Programme in Higher Education and Research for Development) project in
@@ -56,10 +59,10 @@
         “Strengthening problem-based learning in South Asian Universities” (PBL
         South Asia). The project is being coordinated by JNEC.
       </p>
-      <p className="project-objectives mt-3" style=" font-size: 18px;
+      <p className="project-objectives mt-5" style=" font-size: 18px;
   color: #666;
   line-height: 1.5;
-  margin-top: 0;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;">
         <b className="text-dark">Partners:</b> Jigme Namgyel Engineering College
@@ -87,27 +90,16 @@
   margin-right: auto;">
         <b className="text-dark">Project objectives: </b>
       </p>
-      <ol className="project-objectives" style=" font-size: 18px;
-  color: #666;
-  line-height: 1.5;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;">
-        <li>
-          Develop new academic programme on timber engineering for energy
-          efficient buildings leading to an award of “Certificate in Timber
-          Engineering for Energy Efficient Buildings” including associated
-          laboratory
-        </li>
-        <li>
-          Develop two new courses at JNEC: Gender, equity and diversity
-          sensitive science, technology, engineering and mathematics (STEM);
-          Building modelling and simulation, and HVAC
-        </li>
-        <li>Enhance teaching and research capacity of JNEC</li>
-        <li>Improve Instructional Support Services at JNEC</li>
-        <li>Internationalise UIBK</li>
-      </ol>
+      <ul style="font-size: 18px;
+           line-height: 1.5;
+           list-style-type: disc;">
+ <i></i> <li>Develop new academic programme on timber engineering for energy efficient buildings leading to an award of “Certificate in Timber Engineering for Energy Efficient Buildings” including associated laboratory</li>
+  <li>Develop two new courses at JNEC: Gender, equity and diversity sensitive science, technology, engineering and mathematics (STEM); Building modelling and simulation, and HVAC</li>
+  <li>Enhance teaching and research capacity of JNEC</li>
+  <li>Improve Instructional Support Services at JNEC</li>
+  <li>Internationalise UIBK</li>
+</ul>
+
     </div>
 
   </div>
@@ -123,22 +115,22 @@
     <div class="tab-content">
       <div id="li-new-product" class="tab-pane active show" role="tabpanel">
         <div class="row">
-        <?php foreach($t_news as $i => $event): ?>
+        <?php $count = 0; foreach(array_reverse($t_news) as $i => $event):
+            if ($count == 4) break;
+        ?>
             <div class="col-lg-3">
               <div class="single-product-wrap">
-                <div class="product-image" style=" width: 100%;
-  height: 250px; 
-  overflow: hidden;">
-                  <a href="single-product.html">
-                    <img src="<?php echo $event['Image']; ?>" alt="Li's Product Image" style=" width: 100%;
-  height: 200px;">
-                  </a>
-                </div>
+             <div class="product-image" >
+ 
+    <img src="<?php echo $event['Image']; ?>" alt="Li's Product Image" style="width: 100%; height: 200px;">
+
+</div>
+
                 <div class="product_desc">
                   <div class="product_desc_info">
                     <div class="product-review">
                       <h5 class="manufacturer">
-                        <a href="#"><?php echo $event['Name']; ?></a>
+                        <h4><?php echo $event['Name']; ?></h4>
                       </h5>
                     </div>
                     <span class="new-price"><?= substr(strip_tags($event['Description']), 0, 300) . '............'; ?></span>
@@ -149,7 +141,7 @@
                 </div> <!-- missing closing tag for product_desc div -->
               </div>
             </div>
-            <?php endforeach; ?>
+             <?php $count++; endforeach; ?>
         </div>
       </div>
     </div>
